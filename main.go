@@ -7,6 +7,8 @@ import (
 
 func init() {
 	initializers.LoadEnvVariables() // Loading .env
+	initializers.ConnectToDB()      // Connect to the DB
+	initializers.SyncDatabase()     //	Makes sure DB is set up
 }
 
 func main() {
