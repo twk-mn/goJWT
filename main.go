@@ -17,6 +17,7 @@ func main() {
 	r := gin.Default() // Setting up Gin
 	// Route for signup
 	r.POST("/signup", controllers.Signup)
+	r.POST("/login", controllers.Login)
 
 	r.Run()
 }
