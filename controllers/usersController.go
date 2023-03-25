@@ -109,3 +109,11 @@ func Login(c *gin.Context) {
 		// To send JWT -> "token": tokenString,
 	})
 }
+
+func Validate(c *gin.Context) {
+	user, _ := c.Get("user") // fetch user data
+
+	c.JSON(http.StatusOK, gin.H{
+		"message": user, // Displays the user data
+	})
+}
